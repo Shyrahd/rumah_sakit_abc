@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beranda - RS ABC</title>
+    <link rel="icon" href="./assets/rs_logo.png" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #b71c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="navbar-left">
+          <img src="./assets/rs_logo.png" alt="Logo RS ABC" class="logo" />
+          <h1>Rumah Sakit ABC</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2>Selamat Datang di Rumah Sakit ABC</h2>
+          <p>
+            Kami berkomitmen memberikan pelayanan kesehatan terbaik bagi
+            masyarakat dengan tenaga medis profesional dan fasilitas yang
+            memadai.
+          </p>
+          <div class="hero-buttons" style="padding-top: 20px">
+            <a href="#antrian" class="hero-btn">Cek Daftar Antri</a>
+            <a href="#jadwal" class="hero-btn">Cek Jadwal Dokter</a>
+            <a href="#kontak" class="hero-btn">Kontak Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Deskripsi Rumah Sakit -->
+    <section
+      id="tentang"
+      style="
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      "
+    >
+      <img
+        src="./assets/rs_logo.png"
+        alt="Logo RS ABC"
+        style="
+          width: 200px;
+          height: auto;
+          border-radius: 8px;
+          object-fit: contain;
+        "
+      />
+      <div>
+        <h3 style="color: #b71c1c; margin-bottom: 15px">
+          Tentang Rumah Sakit ABC
+        </h3>
+        <p
+          style="
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+          "
+        >
+          Rumah Sakit ABC merupakan fasilitas kesehatan unggulan yang
+          berdedikasi memberikan pelayanan medis terbaik dengan tenaga ahli
+          profesional dan teknologi terkini. Kami berkomitmen memberikan
+          perawatan berkualitas dan ramah untuk seluruh pasien kami, serta
+          berkontribusi aktif dalam meningkatkan kesehatan masyarakat.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="tentang"
+      style="
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      "
+    >
+      <img
+        src="./assets/rs_abc.jpg"
+        alt="RS ABC"
+        style="
+          width: 200px;
+          height: auto;
+          border-radius: 8px;
+          object-fit: contain;
+        "
+      />
+      <div>
+        <h3 style="color: #b71c1c; margin-bottom: 15px">
+          Keunggulan Rumah Sakit ABC
+        </h3>
+        <p
+          style="
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+          "
+        >
+          Rumah Sakit ABC menjadi yang terbaik karena fasilitas kesehatan
+          terdepan yang menggabungkan tenaga medis berpengalaman dengan
+          teknologi medis canggih untuk memberikan diagnosa dan perawatan yang
+          akurat dan efektif. Dengan layanan lengkap mulai dari konsultasi
+          hingga tindakan medis spesialis, RS ABC menempatkan kenyamanan dan
+          keselamatan pasien sebagai prioritas utama. Kami juga dikenal karena
+          pelayanan cepat, lingkungan bersih, dan pendekatan personal yang
+          hangat, menjadikan RS ABC pilihan utama masyarakat untuk kesehatan
+          terbaik.
+        </p>
+      </div>
+    </section>
+
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid #c62828;
+        max-width: 80%;
+        margin: 20px auto;
+      "
+    />
+
+    <!-- Section: Antrian -->
+    <section id="antrian" style="text-align: center">
+      <div style="display: flex; justify-content: center; margin-top: 20px">
+        <div
+          style="
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            overflow-x: auto;
+          "
+        >
+          <h3 class="section-title">Daftar Antrian Hari Ini</h3>
+          <table
+            style="
+              width: 100%;
+              border-collapse: separate;
+              border-spacing: 0;
+              border: 1px solid #ddd;
+              border-radius: 12px;
+              overflow: hidden;
+            "
+          >
+            <thead>
+              <tr>
+                <th>No Antri</th>
+                <th>Nama Pasien</th>
+                <th>Poli Tujuan</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A001</td>
+                <td>Rina Maulida</td>
+                <td>Poli Umum</td>
+                <td>Dalam Pemeriksaan</td>
+              </tr>
+              <tr>
+                <td>A002</td>
+                <td>Bagus Prasetyo</td>
+                <td>Poli Anak</td>
+                <td>Dalam Pemeriksaan</td>
+              </tr>
+              <tr>
+                <td>A003</td>
+                <td>Siti Aminah</td>
+                <td>Poli Gigi</td>
+                <td>Dalam Pemeriksaan</td>
+              </tr>
+              <tr>
+                <td>A004</td>
+                <td>Dedi Kurniawan</td>
+                <td>Poli Umum</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A005</td>
+                <td>Intan Permata</td>
+                <td>Poli Gigi</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A006</td>
+                <td>Ahmad Syarif</td>
+                <td>Poli Anak</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A007</td>
+                <td>Lina Marlina</td>
+                <td>Poli Umum</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A008</td>
+                <td>Fajar Nugroho</td>
+                <td>Poli Kulit</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A009</td>
+                <td>Nina Aprilia</td>
+                <td>Poli Kandungan</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A010</td>
+                <td>Rudi Hartono</td>
+                <td>Poli Jantung</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A011</td>
+                <td>Yuni Astuti</td>
+                <td>Poli Saraf</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A012</td>
+                <td>Bambang Prakoso</td>
+                <td>Poli Paru</td>
+                <td>Menunggu</td>
+              </tr>
+              <tr>
+                <td>A013</td>
+                <td>Desi Anggraeni</td>
+                <td>Poli Jiwa</td>
+                <td>Menunggu</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Jadwal Dokter -->
+    <section id="jadwal" style="text-align: center">
+      <div style="display: flex; justify-content: center; margin-top: 20px">
+        <div
+          style="
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            overflow-x: auto;
+          "
+        >
+          <h3 class="section-title">Jadwal Dokter Hari Ini</h3>
+          <table
+            style="
+              width: 100%;
+              border-collapse: separate;
+              border-spacing: 0;
+              border: 1px solid #ddd;
+              border-radius: 12px;
+              overflow: hidden;
+            "
+          >
+            <thead style="background-color: #f5f5f5">
+              <tr>
+                <th>Nama Dokter</th>
+                <th>Spesialis</th>
+                <th>Hari</th>
+                <th>Jam Praktek</th>
+                <th>Poli</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>dr. Budi Santoso</td>
+                <td>Umum</td>
+                <td>Senin - Jumat</td>
+                <td>08:00 - 12:00</td>
+                <td>Poli Umum</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Maya Fitri</td>
+                <td>Gigi</td>
+                <td>Senin - Rabu</td>
+                <td>09:00 - 13:00</td>
+                <td>Poli Gigi</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Andi Rahman</td>
+                <td>Anak</td>
+                <td>Senin, Kamis</td>
+                <td>10:00 - 14:00</td>
+                <td>Poli Anak</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Rina Anggraini</td>
+                <td>Penyakit Dalam</td>
+                <td>Senin, Rabu, Jumat</td>
+                <td>08:00 - 12:00</td>
+                <td>Poli Penyakit Dalam</td>
+                <td style="color: orange">Penuh</td>
+              </tr>
+              <tr>
+                <td>dr. Fajar Prasetyo</td>
+                <td>Orthopedi</td>
+                <td>Selasa, Kamis</td>
+                <td>11:00 - 15:00</td>
+                <td>Poli Tulang</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Indah Sari</td>
+                <td>Obgyn</td>
+                <td>Rabu, Jumat</td>
+                <td>09:00 - 13:00</td>
+                <td>Poli Kandungan</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Dimas Wicaksono</td>
+                <td>Jantung</td>
+                <td>Selasa, Kamis</td>
+                <td>13:00 - 17:00</td>
+                <td>Poli Jantung</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Elok Putri</td>
+                <td>Mata</td>
+                <td>Senin - Rabu</td>
+                <td>10:00 - 14:00</td>
+                <td>Poli Mata</td>
+                <td style="color: blue">Terbatas</td>
+              </tr>
+              <tr>
+                <td>dr. Hafidz Nasir</td>
+                <td>Paru</td>
+                <td>Senin, Kamis</td>
+                <td>08:00 - 12:00</td>
+                <td>Poli Paru</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Nia Lestari</td>
+                <td>Saraf</td>
+                <td>Selasa, Jumat</td>
+                <td>14:00 - 18:00</td>
+                <td>Poli Saraf</td>
+                <td style="color: blue">Terbatas</td>
+              </tr>
+              <tr>
+                <td>dr. Yoga Pradana</td>
+                <td>Psikiatri</td>
+                <td>Rabu, Sabtu</td>
+                <td>10:00 - 14:00</td>
+                <td>Poli Jiwa</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Arief Mulyadi</td>
+                <td>Umum</td>
+                <td>Senin - Jumat</td>
+                <td>08:00 - 12:00</td>
+                <td>Poli Umum</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Sari Ramadhani</td>
+                <td>Gigi</td>
+                <td>Selasa - Kamis</td>
+                <td>12:00 - 16:00</td>
+                <td>Poli Gigi</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+              <tr>
+                <td>dr. Yudha Saputra</td>
+                <td>Bedah</td>
+                <td>Rabu, Jumat</td>
+                <td>09:00 - 13:00</td>
+                <td>Poli Bedah</td>
+                <td style="color: orange">Penuh</td>
+              </tr>
+              <tr>
+                <td>dr. Lestari Handayani</td>
+                <td>Dermatologi</td>
+                <td>Senin - Kamis</td>
+                <td>13:00 - 17:00</td>
+                <td>Poli Kulit</td>
+                <td style="color: green">Tersedia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid #c62828;
+        max-width: 80%;
+        margin: 20px auto;
+      "
+    />
+
+    <!-- Section: Kontak Kami -->
+    <section
+      id="kontak"
+      style="max-width: 80%; margin: 0 auto; text-align: left"
+    >
+      <h3 class="section-title">Kontak Kami</h3>
+      <p><span style="color: #c62828">🚑</span> No Darurat: 112</p>
+      <p>📞 Telepon: (021) 123-4567</p>
+      <p>📧 Email: info@rsabc.com</p>
+      <p>
+        🏥 Alamat: Jl. Jend. Sudirman No.km 4, RW.5, Ario Kemuning, Kec.
+        Kemuning, Kota Palembang, Sumatera Selatan 30128
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      style="
+        background-color: #c62828;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      "
+    >
+      &copy; 2025 Rumah Sakit ABC. Semua hak dilindungi.
+      <div style="margin-top: 15px">
+        <a
+          href="admin.html"
+          style="
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #c62828;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='#c62828';"
+          onmouseout="this.style.backgroundColor='#c62828'; this.style.color='white';"
+        >
+          Halaman Admin
+        </a>
+        <a
+          href="dokter.html"
+          style="
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #c62828;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+          "
+          onmouseover="this.style.backgroundColor='white'; this.style.color='#c62828';"
+          onmouseout="this.style.backgroundColor='#c62828'; this.style.color='white';"
+        >
+          Halaman Dokter
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

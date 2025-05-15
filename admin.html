@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Admin - RS ABC</title>
+    <link rel="icon" href="./assets/rs_logo.png" type="image/png" />
+    <link rel="stylesheet" href="./css/styleadm.css" />
+  </head>
+  <body>
+    <aside>
+      <a href="index.html">
+        <img
+          src="./assets/rs_logo.png"
+          alt="Logo RS ABC"
+          style="width: 100px; display: block; margin: 0 auto 10px"
+        />
+      </a>
+      <h2>RS ABC Admin</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="active" data-section="dashboard">Dashboard</a>
+          </li>
+          <li><a href="#" data-section="pasien">Data Pasien</a></li>
+          <li><a href="#" data-section="jadwal">Jadwal Dokter</a></li>
+          <li><a href="#" data-section="laporan">Laporan</a></li>
+          <li><a href="#" data-section="pengaturan">Pengaturan</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <h1 id="page-title">Dashboard Analitik</h1>
+      </header>
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="menu-section active-section">
+        <div class="dashboard-grid">
+          <div class="card">
+            <h3>Jumlah Pasien Hari Ini</h3>
+            <div class="value">128</div>
+            <div class="desc">
+              Total pasien yang datang hari ini ke rumah sakit.
+            </div>
+          </div>
+          <div class="card">
+            <h3>Pasien Rawat Inap</h3>
+            <div class="value">45</div>
+            <div class="desc">
+              Jumlah pasien yang sedang menjalani rawat inap.
+            </div>
+          </div>
+          <div class="card">
+            <h3>Jadwal Dokter Hari Ini</h3>
+            <div class="value">12</div>
+            <div class="desc">
+              Dokter yang bertugas hari ini di berbagai poli.
+            </div>
+          </div>
+          <div class="card">
+            <h3>Rata-rata Waktu Tunggu</h3>
+            <div class="value">15 menit</div>
+            <div class="desc">
+              Rata-rata waktu tunggu pasien di UGD dan Poli.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Pasien -->
+      <section id="pasien" class="menu-section">
+        <h2>Data Pasien</h2>
+        <table
+          border="1"
+          width="100%"
+          cellspacing="0"
+          cellpadding="8"
+          style="text-align: center"
+        >
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Pasien</th>
+              <th>Usia</th>
+              <th>Jenis Kelamin</th>
+              <th>Diagnosa</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Ahmad Setiawan</td>
+              <td>32</td>
+              <td>Laki-laki</td>
+              <td>Demam Berdarah</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Siti Nurhaliza</td>
+              <td>27</td>
+              <td>Perempuan</td>
+              <td>Infeksi Saluran Kemih</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Dewi Lestari</td>
+              <td>40</td>
+              <td>Perempuan</td>
+              <td>Diabetes Mellitus</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Joko Riyadi</td>
+              <td>58</td>
+              <td>Laki-laki</td>
+              <td>Hipertensi</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Lina Marlina</td>
+              <td>33</td>
+              <td>Perempuan</td>
+              <td>Maag Akut</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Samsul Hadi</td>
+              <td>22</td>
+              <td>Laki-laki</td>
+              <td>Cedera Lutut</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Ratna Wulandari</td>
+              <td>30</td>
+              <td>Perempuan</td>
+              <td>Anemia</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Irwan Saputra</td>
+              <td>46</td>
+              <td>Laki-laki</td>
+              <td>Stroke Ringan</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Maria Kristina</td>
+              <td>29</td>
+              <td>Perempuan</td>
+              <td>Infeksi THT</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Agus Wijaya</td>
+              <td>51</td>
+              <td>Laki-laki</td>
+              <td>Pneumonia</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Nurul Aini</td>
+              <td>36</td>
+              <td>Perempuan</td>
+              <td>Vertigo</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Rudi Hartono</td>
+              <td>60</td>
+              <td>Laki-laki</td>
+              <td>Jantung Koroner</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Yanti Susanti</td>
+              <td>27</td>
+              <td>Perempuan</td>
+              <td>Alergi Makanan</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Fajar Nugroho</td>
+              <td>44</td>
+              <td>Laki-laki</td>
+              <td>Asma</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Mira Andriani</td>
+              <td>38</td>
+              <td>Perempuan</td>
+              <td>Infeksi Kulit</td>
+              <td>Rawat Jalan</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Rahmat Hidayat</td>
+              <td>49</td>
+              <td>Laki-laki</td>
+              <td>Tuberkulosis</td>
+              <td>Rawat Inap</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Selvi Oktaviani</td>
+              <td>24</td>
+              <td>Perempuan</td>
+              <td>Demam Berdarah</td>
+              <td>Rawat Inap</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Jadwal Dokter -->
+      <section id="jadwal" class="menu-section">
+        <h2>Jadwal Dokter Hari Ini</h2>
+        <table
+          border="1"
+          width="100%"
+          cellspacing="0"
+          cellpadding="8"
+          style="text-align: center"
+        >
+          <thead style="background-color: #f5f5f5">
+            <tr>
+              <th>Nama Dokter</th>
+              <th>Spesialis</th>
+              <th>Hari</th>
+              <th>Jam Praktek</th>
+              <th>Poli</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>dr. Budi Santoso</td>
+              <td>Umum</td>
+              <td>Senin - Jumat</td>
+              <td>08:00 - 12:00</td>
+              <td>Poli Umum</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Maya Fitri</td>
+              <td>Gigi</td>
+              <td>Senin - Rabu</td>
+              <td>09:00 - 13:00</td>
+              <td>Poli Gigi</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Andi Rahman</td>
+              <td>Anak</td>
+              <td>Senin, Kamis</td>
+              <td>10:00 - 14:00</td>
+              <td>Poli Anak</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Rina Anggraini</td>
+              <td>Penyakit Dalam</td>
+              <td>Senin, Rabu, Jumat</td>
+              <td>08:00 - 12:00</td>
+              <td>Poli Penyakit Dalam</td>
+              <td style="color: orange">Penuh</td>
+            </tr>
+            <tr>
+              <td>dr. Fajar Prasetyo</td>
+              <td>Orthopedi</td>
+              <td>Selasa, Kamis</td>
+              <td>11:00 - 15:00</td>
+              <td>Poli Tulang</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Indah Sari</td>
+              <td>Obgyn</td>
+              <td>Rabu, Jumat</td>
+              <td>09:00 - 13:00</td>
+              <td>Poli Kandungan</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Dimas Wicaksono</td>
+              <td>Jantung</td>
+              <td>Selasa, Kamis</td>
+              <td>13:00 - 17:00</td>
+              <td>Poli Jantung</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Elok Putri</td>
+              <td>Mata</td>
+              <td>Senin - Rabu</td>
+              <td>10:00 - 14:00</td>
+              <td>Poli Mata</td>
+              <td style="color: blue">Terbatas</td>
+            </tr>
+            <tr>
+              <td>dr. Hafidz Nasir</td>
+              <td>Paru</td>
+              <td>Senin, Kamis</td>
+              <td>08:00 - 12:00</td>
+              <td>Poli Paru</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Nia Lestari</td>
+              <td>Saraf</td>
+              <td>Selasa, Jumat</td>
+              <td>14:00 - 18:00</td>
+              <td>Poli Saraf</td>
+              <td style="color: blue">Terbatas</td>
+            </tr>
+            <tr>
+              <td>dr. Yoga Pradana</td>
+              <td>Psikiatri</td>
+              <td>Rabu, Sabtu</td>
+              <td>10:00 - 14:00</td>
+              <td>Poli Jiwa</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Arief Mulyadi</td>
+              <td>Umum</td>
+              <td>Senin - Jumat</td>
+              <td>08:00 - 12:00</td>
+              <td>Poli Umum</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Sari Ramadhani</td>
+              <td>Gigi</td>
+              <td>Selasa - Kamis</td>
+              <td>12:00 - 16:00</td>
+              <td>Poli Gigi</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+            <tr>
+              <td>dr. Yudha Saputra</td>
+              <td>Bedah</td>
+              <td>Rabu, Jumat</td>
+              <td>09:00 - 13:00</td>
+              <td>Poli Bedah</td>
+              <td style="color: orange">Penuh</td>
+            </tr>
+            <tr>
+              <td>dr. Lestari Handayani</td>
+              <td>Dermatologi</td>
+              <td>Senin - Kamis</td>
+              <td>13:00 - 17:00</td>
+              <td>Poli Kulit</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Laporan -->
+      <section id="laporan" class="menu-section">
+        <h2>Laporan Mingguan</h2>
+        <ul style="padding-left: 20px">
+          <li>Jumlah pasien pekan ini: 524 orang</li>
+          <li>Kasus terbanyak: ISPA dan Demam</li>
+          <li>Rata-rata waktu pelayanan: 18 menit</li>
+          <li>Kepuasan pasien: 92%</li>
+        </ul>
+
+        <!-- Grid Container -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+          "
+        >
+          <!-- Card 1 -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+            "
+          >
+            <h3 style="text-align: center">Grafik Pasien per Hari</h3>
+            <canvas id="chartPasien" width="250" height="250"></canvas>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+            "
+          >
+            <h3 style="text-align: center">Distribusi Jenis Kelamin Pasien</h3>
+            <canvas id="chartGender" width="250" height="250"></canvas>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+            "
+          >
+            <h3 style="text-align: center">Distribusi Diagnosa Pasien</h3>
+            <canvas id="chartDiagnosa" width="250" height="250"></canvas>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+            "
+          >
+            <h3 style="text-align: center">Status Rawat Pasien</h3>
+            <canvas id="chartStatus" width="250" height="250"></canvas>
+          </div>
+
+          <!-- <div class="card">Chart lainnya</div> -->
+        </div>
+      </section>
+
+      <!-- Pengaturan -->
+      <section id="pengaturan" class="menu-section">
+        <h2>Pengaturan Akun</h2>
+        <form>
+          <label>Nama Admin:</label><br />
+          <input type="text" value="Admin RS ABC" /><br /><br />
+          <label>Email:</label><br />
+          <input type="email" value="admin@rsabc.com" /><br /><br />
+          <label>Ganti Password:</label><br />
+          <input type="password" placeholder="Password Baru" /><br /><br />
+          <button type="submit">Simpan Pengaturan</button>
+        </form>
+      </section>
+
+      <footer>&copy; 2025 Rumah Sakit ABC. Semua hak dilindungi.</footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const links = document.querySelectorAll("aside nav a");
+      const sections = document.querySelectorAll(".menu-section");
+      const title = document.getElementById("page-title");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          links.forEach((l) => l.classList.remove("active"));
+          sections.forEach((s) => s.classList.remove("active-section"));
+          this.classList.add("active");
+          const sectionId = this.getAttribute("data-section");
+          document.getElementById(sectionId).classList.add("active-section");
+          title.textContent = this.textContent;
+        });
+      });
+
+      // Chart Pasien (Bar Chart)
+      new Chart(document.getElementById("chartPasien"), {
+        type: "bar",
+        data: {
+          labels: [
+            "Senin",
+            "Selasa",
+            "Rabu",
+            "Kamis",
+            "Jumat",
+            "Sabtu",
+            "Minggu",
+          ],
+          datasets: [
+            {
+              label: "Jumlah Pasien",
+              data: [80, 95, 100, 88, 92, 75, 84],
+              backgroundColor: "rgba(255, 0, 0, 0.8)", // merah terang transparan
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Chart Gender (Pie Chart)
+      new Chart(document.getElementById("chartGender"), {
+        type: "pie",
+        data: {
+          labels: ["Laki-laki", "Perempuan"],
+          datasets: [
+            {
+              data: [270, 254],
+              backgroundColor: ["#1976d2", "#f06292"],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+
+      // Chart Status (Doughnut Chart)
+      new Chart(document.getElementById("chartStatus"), {
+        type: "doughnut",
+        data: {
+          labels: ["Rawat Jalan", "Rawat Inap"],
+          datasets: [
+            {
+              data: [390, 134],
+              backgroundColor: ["#81c784", "#ffb74d"],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+
+      // Chart Diagnosa (Pie Chart)
+      new Chart(document.getElementById("chartDiagnosa"), {
+        type: "pie",
+        data: {
+          labels: [
+            "ISPA",
+            "Demam Berdarah",
+            "Hipertensi",
+            "Diabetes",
+            "Lainnya",
+          ],
+          datasets: [
+            {
+              label: "Distribusi Diagnosa",
+              data: [120, 90, 60, 45, 209],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(255, 206, 86, 0.6)",
+                "rgba(75, 192, 192, 0.6)",
+                "rgba(153, 102, 255, 0.6)",
+                "rgba(201, 203, 207, 0.6)",
+              ],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+
+      // Chart Waktu Pelayanan (Line Chart)
+      new Chart(document.getElementById("chartWaktu"), {
+        type: "line",
+        data: {
+          labels: [
+            "Senin",
+            "Selasa",
+            "Rabu",
+            "Kamis",
+            "Jumat",
+            "Sabtu",
+            "Minggu",
+          ],
+          datasets: [
+            {
+              label: "Waktu Pelayanan (menit)",
+              data: [17, 18, 19, 17, 16, 18, 20],
+              fill: false,
+              borderColor: "rgba(255, 99, 132, 0.8)",
+              tension: 0.1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+    </script>
+  </body>
+</html>
