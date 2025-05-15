@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Dokter - RS ABC</title>
+    <link rel="stylesheet" href="./css/styleadm.css" />
+    <link rel="icon" href="./assets/rs_logo.png" type="image/png" />
+  </head>
+  <body>
+    <aside>
+      <a href="index.html">
+        <img
+          src="./assets/rs_logo.png"
+          alt="Logo RS ABC"
+          style="width: 100px; display: block; margin: 0 auto 10px"
+      /></a>
+      <h2>Menu Dokter</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="menu-link active" data-target="menu-utama"
+              >Menu Utama</a
+            >
+          </li>
+          <li>
+            <a href="#" class="menu-link" data-target="input-riwayat"
+              >Input Riwayat Pasien</a
+            >
+          </li>
+          <li>
+            <a href="#" class="menu-link" data-target="jadwal-praktek"
+              >Jadwal Praktek</a
+            >
+          </li>
+          <li>
+            <a href="#" class="menu-link" data-target="data-pasien"
+              >Data Pasien</a
+            >
+          </li>
+          <li><a href="#" class="menu-link" data-target="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <h1>Dashboard Dokter RS ABC</h1>
+      </header>
+
+      <section id="menu-utama" class="menu-section active-section">
+        <h2>Menu Utama</h2>
+        <p>
+          Selamat datang, Dokter. Silakan pilih kegiatan dari menu di samping.
+        </p>
+
+        <!-- Berita Terkini -->
+        <div style="margin-top: 20px">
+          <h3>📰 Berita Terkini di Rumah Sakit</h3>
+          <ul style="padding-left: 20px">
+            <li>
+              📢 Pelayanan klinik sore kini dibuka hingga pukul 19.00 WIB.
+            </li>
+            <li>💉 Vaksinasi booster untuk staf dimulai Senin depan.</li>
+            <li>
+              🏥 Ruang IGD baru telah diresmikan dan mulai beroperasi hari ini.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Jadwal Harian -->
+        <div style="margin-top: 30px">
+          <h3>📅 Jadwal Harian Anda Hari Ini</h3>
+          <table
+            border="1"
+            cellpadding="8"
+            cellspacing="0"
+            style="width: 100%; max-width: 600px; text-align: center"
+          >
+            <thead style="background-color: #f0f0f0">
+              <tr>
+                <th>Waktu</th>
+                <th>Kegiatan</th>
+                <th>Ruangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:00 - 10:00</td>
+                <td>Poliklinik Umum</td>
+                <td>Poli 1</td>
+              </tr>
+              <tr>
+                <td>10:30 - 12:00</td>
+                <td>Konsultasi Pasien Rawat Inap</td>
+                <td>Lantai 2</td>
+              </tr>
+              <tr>
+                <td>13:00 - 14:30</td>
+                <td>Rapat Tim Medis</td>
+                <td>Ruang Rapat Utama</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="input-riwayat" class="menu-section">
+        <h2>Input Riwayat Kesehatan Pasien</h2>
+        <form>
+          <label for="namaPasien">Nama Pasien</label>
+          <input
+            type="text"
+            id="namaPasien"
+            name="namaPasien"
+            placeholder="Contoh: Budi Santoso"
+            required
+          />
+
+          <label for="tanggalLahir">Tanggal Lahir</label>
+          <input type="date" id="tanggalLahir" name="tanggalLahir" required />
+
+          <label for="jenisKelamin">Jenis Kelamin</label>
+          <select id="jenisKelamin" name="jenisKelamin" required>
+            <option value="">-- Pilih Jenis Kelamin --</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+
+          <label for="alamat">Alamat</label>
+          <textarea
+            id="alamat"
+            name="alamat"
+            rows="2"
+            placeholder="Masukkan alamat lengkap pasien"
+            required
+          ></textarea>
+
+          <label for="keluhan">Keluhan</label>
+          <textarea
+            id="keluhan"
+            name="keluhan"
+            rows="4"
+            placeholder="Tuliskan keluhan pasien..."
+            required
+          ></textarea>
+
+          <label for="diagnosa">Diagnosa</label>
+          <textarea
+            id="diagnosa"
+            name="diagnosa"
+            rows="3"
+            placeholder="Tuliskan diagnosa dokter..."
+            required
+          ></textarea>
+
+          <label for="tindakan">Tindakan / Pengobatan</label>
+          <textarea
+            id="tindakan"
+            name="tindakan"
+            rows="3"
+            placeholder="Tuliskan tindakan atau pengobatan yang diberikan"
+            required
+          ></textarea>
+
+          <label for="tanggalKunjungan">Tanggal Kunjungan</label>
+          <input
+            type="date"
+            id="tanggalKunjungan"
+            name="tanggalKunjungan"
+            required
+          />
+
+          <button type="submit" class="hero-btn" style="margin-top: 20px">
+            Simpan Rekam Medis
+          </button>
+        </form>
+      </section>
+
+      <section id="jadwal-praktek" class="menu-section">
+        <h2>Jadwal Praktek Dokter</h2>
+        <p>Berikut jadwal praktek anda:</p>
+
+        <table
+          border="1"
+          cellpadding="5"
+          cellspacing="0"
+          style="width: 100%; max-width: 600px; text-align: center"
+        >
+          <thead>
+            <tr>
+              <th>Spesialis</th>
+              <th>Hari</th>
+              <th>Jam Praktek</th>
+              <th>Ruangan</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Penyakit Dalam</td>
+              <td>Selasa & Kamis</td>
+              <td>10.00 - 13.00</td>
+              <td>Poli Penyakit Dalam</td>
+              <td style="color: green">Tersedia</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="data-pasien" class="menu-section">
+        <h2>Data Pasien</h2>
+        <p>Menampilkan daftar pasien yang Anda tangani.</p>
+        <table
+          border="1"
+          width="100%"
+          cellspacing="0"
+          cellpadding="8"
+          style="text-align: center"
+        >
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Pasien</th>
+              <th>Usia</th>
+              <th>Jenis Kelamin</th>
+              <th>Diagnosa</th>
+              <th>Rekam Medis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Budi Santoso</td>
+              <td>52</td>
+              <td>Laki-laki</td>
+              <td>Hipertensi</td>
+              <td>
+                <button onclick="tampilkanRekamMedis('budi-santoso')">
+                  Lihat
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Andi Wijaya</td>
+              <td>34</td>
+              <td>Laki-laki</td>
+              <td>Asma</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Siti Aminah</td>
+              <td>29</td>
+              <td>Perempuan</td>
+              <td>Diabetes</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Rina Maulida</td>
+              <td>23</td>
+              <td>Perempuan</td>
+              <td>Demam</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Bagus Prasetyo</td>
+              <td>31</td>
+              <td>Laki-laki</td>
+              <td>Flu Berat</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Siti Aminah</td>
+              <td>29</td>
+              <td>Perempuan</td>
+              <td>Infeksi Gigi</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Ahmad Rofiq</td>
+              <td>42</td>
+              <td>Laki-laki</td>
+              <td>Asma</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Lina Hartati</td>
+              <td>38</td>
+              <td>Perempuan</td>
+              <td>Kolesterol Tinggi</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Wahyu Rahman</td>
+              <td>45</td>
+              <td>Laki-laki</td>
+              <td>Radang Tenggorokan</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Desi Marlina</td>
+              <td>33</td>
+              <td>Perempuan</td>
+              <td>Nyeri Sendi</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Fadli Zulkarnain</td>
+              <td>27</td>
+              <td>Laki-laki</td>
+              <td>Cedera Bahu</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Rosa Permata</td>
+              <td>30</td>
+              <td>Perempuan</td>
+              <td>Infeksi Saluran Kencing</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Rendra Wijaya</td>
+              <td>50</td>
+              <td>Laki-laki</td>
+              <td>Hipoglikemia</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Salsa Annisa</td>
+              <td>26</td>
+              <td>Perempuan</td>
+              <td>Tekanan Darah Tinggi</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Aditya Kurniawan</td>
+              <td>35</td>
+              <td>Laki-laki</td>
+              <td>ISPA</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Hendra Lesmana</td>
+              <td>43</td>
+              <td>Laki-laki</td>
+              <td>Demam Berdarah</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Melati Susanti</td>
+              <td>21</td>
+              <td>Perempuan</td>
+              <td>Skoliosis</td>
+              <td><button>Lihat</button></td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>Ilham Fauzi</td>
+              <td>37</td>
+              <td>Laki-laki</td>
+              <td>Luka Terbuka</td>
+              <td><button>Lihat</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="logout" class="menu-section">
+        <h2>Logout</h2>
+        <p style="padding-bottom: 10px">Apakah Anda yakin ingin keluar?</p>
+        <button class="hero-btn">Konfirmasi Logout</button>
+      </section>
+
+      <section
+        id="rekam-medis-budi-santoso"
+        class="menu-section"
+        style="display: none"
+      >
+        <h2>Rekam Medis - Budi Santoso</h2>
+        <p><strong>Nama:</strong> Budi Santoso</p>
+        <p><strong>Usia:</strong> 52</p>
+        <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
+        <p><strong>Diagnosa:</strong> Hipertensi</p>
+        <h3>Riwayat Kesehatan</h3>
+        <ul style="padding-left: 20px">
+          <li>12 Jan 2025 - Pemeriksaan tekanan darah tinggi.</li>
+          <li>20 Feb 2025 - Kontrol lanjutan. Tekanan darah stabil.</li>
+          <li>05 Mar 2025 - Diberikan resep Amlodipine.</li>
+        </ul>
+        <button onclick="kembaliKeDataPasien()">Kembali</button>
+      </section>
+
+      <footer>&copy; 2025 Rumah Sakit ABC</footer>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script>
+      function tampilkanRekamMedis(id) {
+        // Sembunyikan semua section
+        const sections = document.querySelectorAll(".menu-section");
+        sections.forEach((sec) => (sec.style.display = "none"));
+
+        // Tampilkan rekam medis sesuai ID
+        document.getElementById("rekam-medis-" + id).style.display = "block";
+      }
+
+      function kembaliKeDataPasien() {
+        // Sembunyikan semua section
+        const sections = document.querySelectorAll(".menu-section");
+        sections.forEach((sec) => (sec.style.display = "none"));
+
+        // Tampilkan section Data Pasien
+        document.getElementById("data-pasien").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 5px;
+}
+
+header {
+  background-color: #c62828;
+  color: white;
+  padding: 8px 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  background-color: #c62828; /* Merah */
+  color: white; /* Teks putih */
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  border: 2px solid #c62828;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: white; /* Hover: putih */
+  color: #c62828; /* Teks merah */
+  border-color: #c62828;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bgSlide 12s infinite;
+}
+
+/* Overlay untuk membuat latar putih semi-transparan */
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.1); /* 50% opacity putih */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Konten di tengah */
+.hero-content {
+  text-align: center;
+  padding: 40px 60px;
+  background-color: rgba(255, 255, 255, 0.9); /* Latar belakang konten */
+  border-radius: 10px; /* Hilangkan radius jika ingin full-width terlihat menyatu */
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero h2 {
+  color: #b71c1c;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #333;
+}
+
+.hero-btn {
+  background-color: #ffffff; /* Tombol putih */
+  color: #c62828; /* Teks merah */
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #c62828; /* Garis tepi merah */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #c62828; /* Hover jadi merah */
+  color: white; /* Teks putih saat hover */
+}
+
+/* Animasi Background Carousel */
+@keyframes bgSlide {
+  0% {
+    background-image: url("../assets/rs_abc.jpg");
+  }
+  33% {
+    background-image: url("../assets/rs_pelayanan.jpg");
+  }
+  66% {
+    background-image: url("../assets/rs_pelayana.jpg");
+  }
+  100% {
+    background-image: url("../assets/rs_abc.jpg");
+  }
+}
+
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.section h3 {
+  color: #b71c1c;
+  margin-bottom: 15px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+.carousel {
+  background-color: #fcebea;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 500px; /* Tambahkan tinggi tetap agar container tidak collapse */
+}
+
+.slides {
+  position: relative; /* Pastikan posisi relatif */
+  height: 100%;
+}
+
+.slide {
+  position: absolute; /* Posisi absolut agar saling tumpuk */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-btn {
+  width: 12px;
+  height: 12px;
+  background-color: #b71c1c;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.nav-btn.active,
+.nav-btn\:hover {
+  opacity: 1;
+}
+
+footer {
+  background-color: #c62828;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
